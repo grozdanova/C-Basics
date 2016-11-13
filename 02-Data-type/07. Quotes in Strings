@@ -1,0 +1,16 @@
+using System;
+
+namespace Quotes_in_Strings
+{
+    class Program
+    {
+        static void Main()
+        {
+            string myline1 = "The \"use\" of quotations causes difficulties.";
+            string myline2 = @"The ""use"" of quotations causes difficulties.";
+
+            Console.WriteLine(myline1 + "\n");
+           
+        }
+    }
+}

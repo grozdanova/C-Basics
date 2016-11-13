@@ -1,0 +1,14 @@
+using System;
+
+namespace Print_the_ASCII_Table
+{
+    class Program
+    {
+        static void Main()
+        {
+            for (int i = 33; i <= 126; i++)
+
+                Console.Write("{0}", (char)i);
+        }
+    }
+} 
