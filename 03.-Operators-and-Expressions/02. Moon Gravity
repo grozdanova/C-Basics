@@ -1,0 +1,17 @@
+using System;
+namespace Moon_gravity
+{
+    class Program
+    {
+        static void Main()
+        {
+            string input = Console.ReadLine();
+            double earthWeight = double.Parse(input);
+            double moonGravity = 0.17;
+            double moonWeigt = earthWeight * moonGravity;
+          
+            Console.WriteLine("{0:F3}", moonWeigt);
+
+        }
+    }
+}

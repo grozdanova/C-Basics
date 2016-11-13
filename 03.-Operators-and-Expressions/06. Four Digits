@@ -1,0 +1,22 @@
+using System;
+namespace Four_digits
+{
+    class Program
+    {
+        static void Main()
+        {
+            uint N = uint.Parse(Console.ReadLine());
+            uint a = N / 1000;
+            uint b = (N / 100) % 10;
+            uint c = (N / 10) % 10;
+            uint d = N % 10;
+            uint sum = a + b + c + d;
+
+            string reversedOrder = "{0}{1}{2}{3}";
+            Console.WriteLine(sum);
+            Console.WriteLine(reversedOrder, d, c, b, a);
+            Console.WriteLine(reversedOrder, d, a, b, c);
+            Console.WriteLine(reversedOrder, a, c, b, d);
+        }
+    }
+}

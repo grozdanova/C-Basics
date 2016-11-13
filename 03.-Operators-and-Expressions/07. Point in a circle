@@ -1,0 +1,24 @@
+using System;
+namespace Point_in_a_circle
+{
+    class Program
+    {
+        static void Main()
+        {
+            double x = double.Parse(Console.ReadLine());
+            double y = double.Parse(Console.ReadLine());
+            double radius = 2;
+
+            double result = (x * x + y * y);
+            bool isInCircle = result <= (radius * radius);
+            if (isInCircle)
+            {
+                Console.WriteLine("yes {0:F2}", Math.Sqrt(result));
+            }
+            else
+            {
+                Console.WriteLine("no {0:F2}", Math.Sqrt(result));
+            }
+        }
+    }
+}

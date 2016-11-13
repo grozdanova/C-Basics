@@ -1,0 +1,44 @@
+using System;
+using System.Globalization;
+using System.Threading;
+
+public class PointCircleRectangle
+{
+    public const double CenterY = 1;
+    public const double Radius = 1.5;
+    public const double TopY = 1;
+    public const double LeftX = -1;
+    public const double Width = 6;
+    public const double Height = 2;
+    public const double CenterX = 1;
+
+    public static void Main()
+    {
+        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+        double pointX = double.Parse(Console.ReadLine());
+        double pointY = double.Parse(Console.ReadLine());
+
+        double rightX = LeftX + Width;
+        double bottomY = TopY - Height;
+
+        bool isWithinCircle = Math.Pow(pointX - CenterX, 2) + Math.Pow(pointY - CenterY, 2) <= Radius * Radius;
+        bool isOutOfRectangle = pointX < LeftX || rightX < pointX || pointY < bottomY || pointY > TopY;
+
+        string output = "outside circle outside rectangle";
+
+        if (isWithinCircle && isOutOfRectangle)
+        {
+            output = "inside circle outside rectangle";
+        }
+        else if ((isWithinCircle && !isOutOfRectangle))
+        {
+            output = "inside circle inside rectangle";
+        }
+
+        else if (!isWithinCircle && !isOutOfRectangle)
+        {
+            output = "outside circle inside rectangle";
+        }
+        Console.WriteLine(output);
+    }
+}
