@@ -1,0 +1,21 @@
+using System;
+namespace Print_Long_Sequence
+{
+    class Program
+    {
+        static void Main()
+        {
+            for (int number = 2; number < 1002; number++, Console.WriteLine())
+            {
+                if (number % 2 == 0)
+                {
+                    Console.Write("{0} ", number);
+                }
+                else
+                {
+                    Console.Write("{0} ", -number);
+                }
+            }
+        }
+    }
+}
