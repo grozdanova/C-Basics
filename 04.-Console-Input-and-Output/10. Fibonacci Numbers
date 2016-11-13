@@ -1,0 +1,29 @@
+using System;
+namespace Fibonacci_Numbers
+{
+    class Program
+    {
+        static void Main()
+        {
+            long N = long.Parse(Console.ReadLine());
+            long a = 0;
+            long b = 1;
+
+            if (N == 1)
+            {
+                Console.WriteLine(0);
+            }
+            else
+            {
+                Console.Write("0, 1");
+                for (long i = 1; i < N - 1; i++)
+                {
+                    long c = a + b;
+                    a = b;
+                    b = c;
+                    Console.Write(", {0}", c);
+                }
+            }
+        }
+    }
+}

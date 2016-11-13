@@ -1,0 +1,21 @@
+using System;
+namespace Interval
+{
+    class Program
+    {
+        static void Main()
+        {
+            uint N = uint.Parse(Console.ReadLine());
+            uint M = uint.Parse(Console.ReadLine());
+            uint result = 0;
+            for(uint i = N+1; i < M; i++)
+            {
+                if(i % 5==0)
+                {
+                    result++;
+                }
+            }
+            Console.WriteLine(result);
+        }
+    }
+}

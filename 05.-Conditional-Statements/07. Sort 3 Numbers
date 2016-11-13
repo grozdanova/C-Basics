@@ -1,0 +1,47 @@
+using System;
+namespace Sort_3_Numbers
+{
+    class Program
+    {
+        static void Main()
+        {
+            int firstNumber = int.Parse(Console.ReadLine());
+            int secondNumber = int.Parse(Console.ReadLine());
+            int thirdNumber = int.Parse(Console.ReadLine());
+
+            int var;
+            if (firstNumber < secondNumber && secondNumber > thirdNumber)
+            {
+                var = firstNumber;
+                firstNumber = secondNumber;
+                secondNumber = var;
+
+                if (secondNumber < thirdNumber)
+                {
+                    var = secondNumber;
+                    secondNumber = thirdNumber;
+                    thirdNumber = var;
+                }
+            }
+            else if (firstNumber < thirdNumber)
+            {
+                var = firstNumber;
+                firstNumber = thirdNumber;
+                thirdNumber = var;
+                if (secondNumber < thirdNumber)
+                {
+                    var = secondNumber;
+                    secondNumber = thirdNumber;
+                    thirdNumber = var;
+                }
+            }
+            else if (secondNumber < thirdNumber)
+            {
+                var = secondNumber;
+                secondNumber = thirdNumber;
+                thirdNumber = var;
+            }
+            Console.WriteLine("{0} {1} {2}", firstNumber, secondNumber, thirdNumber);
+        }
+    }
+}

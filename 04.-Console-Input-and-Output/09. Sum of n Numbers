@@ -1,0 +1,18 @@
+using System;
+namespace _09.Sum_of_N_Numbers
+{
+    class Program
+    {
+        static void Main()
+        {
+            int firstN = int.Parse(Console.ReadLine());
+            double sum = 0.0, a;
+            for (int i = 0; i < firstN; i++)
+            {
+                a = double.Parse(Console.ReadLine());
+                sum += a;
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+using System;
+namespace _01.Exchange_If_Greater
+{
+    class Program
+    {
+        static void Main()
+        {
+            double A = double.Parse(Console.ReadLine());
+            double B = double.Parse(Console.ReadLine());
+            double var1 = A;
+            double var2 = B;
+            if (A > B)
+            {
+                var1 = B;
+                var2 = A;
+            }
+           
+            Console.WriteLine("{0} {1}", var1, var2);
+        }
+    }
+}
