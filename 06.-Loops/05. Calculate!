@@ -1,0 +1,22 @@
+using System;
+namespace Calculate_
+{
+    class Program
+    {
+        static void Main()
+        {
+            double N = double.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+            double factorial = 1;
+            double sum = 1;
+            for (double i = 1; i <= N; i++)
+            {
+                factorial *= i;
+                double xPow = Math.Pow(x, i);
+                double S = factorial / xPow;
+                sum += S;
+            }
+            Console.WriteLine("{0:F5}", sum);
+        }
+    }
+}

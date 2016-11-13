@@ -1,0 +1,20 @@
+using System;
+namespace Not_Divisible_Numbers
+{
+    class Program
+    {
+        static void Main()
+        {
+            int N = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= N; i++)
+            {
+                bool div3 = (i % 3 != 0);
+                bool div7 = (i % 7 != 0);
+                if (div3 && div7)
+                {
+                    Console.Write("{0} ", i);
+                }
+            }
+        }
+    }
+}

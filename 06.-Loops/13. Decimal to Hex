@@ -1,0 +1,15 @@
+using System;
+namespace Decimal_to_Hex
+{
+    class Program
+    {
+        static void Main()
+        {
+            long decimalnumber = long.Parse(Console.ReadLine());
+
+            string hex = Convert.ToString(decimalnumber.ToString("X"));
+
+            Console.WriteLine(hex);
+        }
+    }
+}

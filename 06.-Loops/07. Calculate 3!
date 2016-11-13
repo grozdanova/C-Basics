@@ -1,0 +1,23 @@
+using System;
+using System.Numerics;
+namespace Calculate_3_
+{
+    class Program
+    {
+        static void Main()
+        {
+            BigInteger N = BigInteger.Parse(Console.ReadLine());
+            BigInteger K = BigInteger.Parse(Console.ReadLine());
+            BigInteger factorial1 = 1;
+            BigInteger factorial2 = 1;
+            for (BigInteger i = K + 1; i <= N; i++)
+            {
+                factorial1 *= i;
+                factorial2 *= i - K;
+            }
+            BigInteger result = factorial1 / factorial2;
+
+                Console.WriteLine(result);
+        }
+    }
+}

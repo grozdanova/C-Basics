@@ -1,0 +1,36 @@
+using System;
+namespace Decimal_to_Binary
+{
+    class Program
+    {
+        static void Main()
+        {
+            long decimalNumber = long.Parse(Console.ReadLine());
+            string bin = string.Empty;
+            while (decimalNumber > 0)
+            {
+                long reminder = decimalNumber % 2;
+                bin = bin.Insert(0, reminder.ToString());
+                decimalNumber = decimalNumber / 2;
+            }
+
+            Console.WriteLine(bin);
+        }
+    }
+}
+\\variant 2
+using System;
+namespace Decimal_to_Binary_variant_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long decimalnumber = long.Parse(Console.ReadLine());
+
+            string bin = Convert.ToString(decimalnumber, 2);
+
+            Console.WriteLine(bin);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+using System;
+namespace GCD
+{
+    class Program
+    {
+        static void Main()
+        {
+            string[] splitNumbers = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            int a = int.Parse(splitNumbers[0]);
+            int b = int.Parse(splitNumbers[1]);
+            int minValue = Math.Min(Math.Abs(a), Math.Abs(b));
+
+            for (int i = minValue; i >= 0; i--)
+            {
+                if (a % i == 0 && b % i == 0)
+                {
+                    Console.WriteLine(i);
+                    break;
+                }
+            }
+        }
+    }
+}
